@@ -3,107 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Profil Sekolah & PPDB | Digital Pesantren</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Link Official | Yayasan Assunnah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #1f6f51; --secondary: #d4b96a; --light: #f4f9f7; --dark: #2c3e50; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; color: var(--dark); line-height: 1.6; }
+        :root {
+            --primary: #013F00; /* Hijau Tua Pesanan Bos */
+            --white: #ffffff;
+            --bg: #f8f9fa;
+        }
 
-        /* NAVBAR */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 7%; background: white; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo { font-family: 'Montserrat'; font-size: 24px; color: var(--primary); font-weight: 800; }
-        .nav-links { display: flex; gap: 25px; list-style: none; }
-        .nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: var(--primary); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-        /* HERO SECTION */
-        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1541339907198-e08756ebafe3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px; }
-        .hero h1 { font-family: 'Montserrat'; font-size: 48px; margin-bottom: 10px; }
-        .hero p { font-size: 18px; margin-bottom: 25px; max-width: 600px; }
-        .btn-ppdb { padding: 15px 35px; background: var(--secondary); color: white; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 18px; box-shadow: 0 4px 15px rgba(212, 185, 106, 0.4); transition: 0.3s; }
-        .btn-ppdb:hover { transform: translateY(-3px); background: #c0a75d; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            /* Gradient latar belakang lembut agar logo menonjol */
+            background: linear-gradient(180deg, #fff 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+        }
 
-        /* STATS */
-        .stats { display: flex; justify-content: center; gap: 50px; padding: 50px 7%; background: var(--light); flex-wrap: wrap; }
-        .stat-item h2 { color: var(--primary); font-size: 36px; }
+        /* LOGO */
+        .logo-wrapper {
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            border: 3px solid var(--primary);
+        }
 
-        /* PROGRAM */
-        .programs { padding: 80px 7%; text-align: center; }
-        .programs h2 { font-family: 'Montserrat'; margin-bottom: 40px; font-size: 32px; }
-        .grid-program { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .card { padding: 40px; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card i { font-size: 40px; color: var(--secondary); margin-bottom: 15px; display: block; }
+        .logo-wrapper img {
+            width: 85%;
+            height: auto;
+            border-radius: 50%;
+        }
 
-        /* FOOTER */
-        footer { background: var(--dark); color: white; padding: 50px 7%; text-align: center; }
-        
-        /* FLOATING BUTTON */
-        .float-ppdb { position: fixed; bottom: 30px; right: 30px; background: var(--primary); color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 999; display: flex; align-items: center; gap: 10px; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        /* JUDUL */
+        .title-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .nav-links { display: none; }
+        .title-container h1 {
+            color: var(--primary);
+            font-size: 20px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.3;
+        }
+
+        .title-container p {
+            color: #6c757d;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        /* TOMBOL (LINKTREE STYLE) */
+        .links-area {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-link {
+            display: block;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            text-align: center;
+            padding: 16px 20px;
+            border-radius: 50px; /* Bentuk Kapsul */
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Efek pas kursor di atasnya (PC) */
+        .btn-link:hover {
+            background-color: transparent;
+            color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(1, 63, 0, 0.2);
+        }
+
+        /* Efek pas ditekan jari (Mobile) */
+        .btn-link:active {
+            transform: scale(0.96);
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 50px;
+            font-size: 11px;
+            color: #adb5bd;
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">EDU-SMART</div>
-        <ul class="nav-links">
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Profil</a></li>
-            <li><a href="#">Akademik</a></li>
-            <li><a href="#">Galeri</a></li>
-            <li><a href="#">Kontak</a></li>
-        </ul>
-    </nav>
+    <div class="logo-wrapper">
+        <img src="logo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/100/013F00/FFFFFF?text=LOGO'">
+    </div>
 
-    <section class="hero">
-        <h1>Membangun Generasi Robbani</h1>
-        <p>Sekolah modern berbasis nilai-nilai keislaman dan teknologi untuk masa depan yang gemilang.</p>
-        <a href="#ppdb" class="btn-ppdb">INFO PPDB 2026</a>
-    </section>
+    <div class="title-container">
+        <h1>YAYASAN ASSUNNAH<br>CIREBON</h1>
+        <p>Silahkan klik link yang anda butuhkan</p>
+    </div>
 
-    <section class="stats">
-        <div class="stat-item"><h2>500+</h2><p>Santri Aktif</p></div>
-        <div class="stat-item"><h2>40+</h2><p>Guru Berpengalaman</p></div>
-        <div class="stat-item"><h2>15+</h2><p>Ekstrakurikuler</p></div>
-        <div class="stat-item"><h2>A</h2><p>Akreditasi</p></div>
-    </section>
+    <div class="links-area">
+        <a href="https://wa.me/628xxx" class="btn-link" target="_blank">PPDB 2024/2025</a>
+        <a href="https://wa.me/628xxx" class="btn-link" target="_blank">TANYA TENTANG PPDB</a>
+        <a href="tentang.html" class="btn-link">TENTANG KAMI</a>
+        <a href="profil.html" class="btn-link">PROFIL SEKOLAH</a>
+        <a href="konsultasi.html" class="btn-link">KONSULTASI AGAMA</a>
+        <a href="https://facebook.com/xxx" class="btn-link" target="_blank">FACEBOOK</a>
+        <a href="https://instagram.com/xxx" class="btn-link" target="_blank">INSTAGRAM</a>
+        <a href="https://youtube.com/xxx" class="btn-link" target="_blank">YOUTUBE</a>
+    </div>
 
-    <section class="programs">
-        <h2>Program Unggulan</h2>
-        <div class="grid-program">
-            <div class="card">
-                <i>📖</i>
-                <h3>Tahfidz Al-Qur'an</h3>
-                <p>Target hafalan 30 juz dengan metode mutqin dan sanad.</p>
-            </div>
-            <div class="card">
-                <i>🗣️</i>
-                <h3>Billingual Class</h3>
-                <p>Pembiasaan bahasa Arab dan Inggris dalam lingkungan sekolah.</p>
-            </div>
-            <div class="card">
-                <i>💻</i>
-                <h3>IT Digital Class</h3>
-                <p>Pembelajaran pemrograman dan desain grafis sejak dini.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer id="kontak">
-        <p>&copy; 2026 Nama Sekolah Anda. All Rights Reserved.</p>
-        <p>Jl. Raya Pendidikan No. 123, Indonesia</p>
+    <footer>
+        &copy; 2026 Yayasan Assunnah Cirebon | Digital Team
     </footer>
-
-    <a href="https://wa.me/628123456789" class="float-ppdb">
-        <span>Daftar Sekarang (PPDB)</span> 📩
-    </a>
 
 </body>
 </html>
