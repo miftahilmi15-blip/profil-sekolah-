@@ -61,129 +61,132 @@
             max-width: 100%;
             height: auto;
             object-fit: contain;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.2));
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayasan Miftah Cirebon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #013F00;
+            --accent: #d4b96a; /* Warna Emas */
+            --white: #ffffff;
         }
 
-        /* TITLES */
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            animation: fadeIn 1s ease;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        .header h1 {
-            font-size: 24px;
-            font-weight: 800;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-            background: linear-gradient(to bottom, #fff, #bbb);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .header p {
-            font-size: 14px;
-            color: rgba(255,255,255,0.7);
-            font-weight: 400;
-        }
-
-        /* LINKS CONTAINER */
-        .links-container {
-            width: 100%;
-            max-width: 420px;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #011a00; /* Hijau Gelap Pekat */
+            background-image: radial-gradient(circle at top, #024d01 0%, #011a00 100%);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
-            gap: 16px;
-        }
-
-        .link-item {
-            position: relative;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            text-decoration: none;
-            padding: 18px 25px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 15px;
-            text-align: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
             align-items: center;
+            padding: 40px 20px;
+            color: white;
+        }
+
+        /* CONTAINER LOGO - DIBUAT LEBIH LEGA */
+        .brand-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            width: 100%;
+            z-index: 99; /* Pastikan paling depan */
+        }
+
+        .logo-box {
+            width: 140px; /* Ukuran diperbesar */
+            height: 140px;
+            background: white; /* Putih bersih sebagai dasar */
+            padding: 12px;
+            border-radius: 30px; /* Bentuk melengkung mewah */
+            border: 3px solid var(--accent); /* Bingkai Emas */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            display: flex;
             justify-content: center;
-            overflow: hidden;
+            align-items: center;
+            margin-bottom: 20px;
+            position: relative;
         }
 
-        /* Hover Effect */
-        .link-item:hover {
-            background: var(--white);
-            color: var(--primary);
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; /* Logo TIDAK AKAN terpotong/tertutup */
+            display: block;
         }
 
-        /* Glow Effect on Hover */
-        .link-item::after {
-            content: "";
-            position: absolute;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-            opacity: 0;
-            transition: 0.5s;
+        .title-text { text-align: center; }
+        .title-text h1 { 
+            font-size: 22px; 
+            letter-spacing: 1px; 
+            color: var(--accent); 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
-        .link-item:hover::after { opacity: 1; }
+        .title-text p { font-size: 13px; color: #ccc; margin-top: 5px; }
 
-        /* ANIMATIONS */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        /* LINKS */
+        .links-area {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
-        footer {
-            margin-top: 60px;
+        .btn-mewah {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 18px;
+            font-weight: 600;
             text-align: center;
-            font-size: 11px;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 1px;
+            transition: 0.3s;
+            display: block;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 480px) {
-            body { padding: 40px 20px; }
-            .header h1 { font-size: 20px; }
+        .btn-mewah:hover {
+            background: var(--accent);
+            color: var(--primary);
+            transform: translateY(-3px);
+            font-weight: 800;
         }
+
+        footer { margin-top: 50px; font-size: 11px; color: #555; }
     </style>
 </head>
 <body>
 
-    <div class="logo-wrapper">
-        <img src="miftah.png" alt="Miftah Logo" onerror="this.src='https://via.placeholder.com/150/013F00/FFFFFF?text=MIFTAH'">
+    <div class="brand-section">
+        <div class="logo-box">
+            <img src="miftah.png" alt="Logo Yayasan Miftah">
+        </div>
+        <div class="title-text">
+            <h1>YAYASAN MIFTAH CIREBON</h1>
+            <p>Silahkan klik link yang anda butuhkan</p>
+        </div>
     </div>
 
-    <div class="header">
-        <h1>YAYASAN MIFTAH CIREBON</h1>
-        <p>Silahkan klik link yang anda butuhkan</p>
-    </div>
-
-    <div class="links-container">
-        <a href="#" class="link-item">PPDB 2024/2025</a>
-        <a href="#" class="link-item">TANYA TENTANG PPDB</a>
-        <a href="tentang.html" class="link-item">TENTANG KAMI</a>
-        <a href="profil.html" class="link-item">PROFIL SEKOLAH</a>
-        <a href="konsultasi.html" class="link-item">KONSULTASI AGAMA</a>
-        <a href="https://www.facebook.com/miftah.ilmi.31" class="link-item" target="_blank">FACEBOOK</a>
-        <a href="#" class="link-item" target="_blank">INSTAGRAM</a>
-        <a href="#" class="link-item" target="_blank">YOUTUBE</a>
+    <div class="links-area">
+        <a href="#" class="btn-mewah">PPDB 2024/2025</a>
+        <a href="#" class="btn-mewah">TANYA TENTANG PPDB</a>
+        <a href="tentang.html" class="btn-mewah">TENTANG KAMI</a>
+        <a href="profil.html" class="btn-mewah">PROFIL SEKOLAH</a>
+        <a href="https://www.facebook.com/miftah.ilmi.31" class="btn-mewah" target="_blank">FACEBOOK</a>
+        <a href="#" class="btn-mewah" target="_blank">INSTAGRAM</a>
+        <a href="#" class="btn-mewah" target="_blank">YOUTUBE</a>
     </div>
 
     <footer>
-        &copy; 2026 YAYASAN MIFTAH CIREBON | DIGITAL TEAM
+        &copy; 2026 Yayasan Miftah Cirebon
     </footer>
 
 </body>
