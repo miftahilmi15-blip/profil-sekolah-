@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Link Official | Yayasan Miftah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,9 +14,7 @@
         }
 
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; padding: 0; box-sizing: border-box;
             -webkit-tap-highlight-color: transparent;
         }
 
@@ -26,167 +25,123 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 60px 24px;
+            padding: 50px 24px;
             color: var(--white);
         }
 
-        /* BACKGROUND DECORATION */
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/islamic-art.png');
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        /* LOGO BOX */
+        /* LOGO BOX - DIBUAT PUTIH BIAR "MIFTAH.PNG" KELIHATAN JELAS */
         .logo-wrapper {
-            width: 130px;
-            height: 130px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 40px; /* Bentuk Squircle modern */
+            width: 120px;
+            height: 120px;
+            background: white; /* Background putih biar logo kontras */
+            border-radius: 35px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            animation: fadeInDown 0.8s ease;
+            margin-bottom: 20px;
+            border: 3px solid var(--accent);
+            padding: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
         .logo-wrapper img {
             max-width: 100%;
             height: auto;
             object-fit: contain;
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yayasan Miftah Cirebon</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #013F00;
-            --accent: #d4b96a; /* Warna Emas */
-            --white: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        .header { text-align: center; margin-bottom: 35px; }
+        .header h1 { font-size: 22px; font-weight: 800; letter-spacing: 1px; color: var(--accent); margin-bottom: 5px; }
+        .header p { font-size: 13px; color: rgba(255,255,255,0.6); }
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #011a00; /* Hijau Gelap Pekat */
-            background-image: radial-gradient(circle at top, #024d01 0%, #011a00 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 40px 20px;
-            color: white;
-        }
+        /* LINKS AREA */
+        .links-container { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 14px; }
 
-        /* CONTAINER LOGO - DIBUAT LEBIH LEGA */
-        .brand-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-            width: 100%;
-            z-index: 99; /* Pastikan paling depan */
-        }
-
-        .logo-box {
-            width: 140px; /* Ukuran diperbesar */
-            height: 140px;
-            background: white; /* Putih bersih sebagai dasar */
-            padding: 12px;
-            border-radius: 30px; /* Bentuk melengkung mewah */
-            border: 3px solid var(--accent); /* Bingkai Emas */
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .logo-box img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Logo TIDAK AKAN terpotong/tertutup */
-            display: block;
-        }
-
-        .title-text { text-align: center; }
-        .title-text h1 { 
-            font-size: 22px; 
-            letter-spacing: 1px; 
-            color: var(--accent); 
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-        .title-text p { font-size: 13px; color: #ccc; margin-top: 5px; }
-
-        /* LINKS */
-        .links-area {
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .btn-mewah {
-            background: rgba(255, 255, 255, 0.08);
+        .link-item {
+            background: rgba(255, 255, 255, 0.07);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--white);
             text-decoration: none;
-            padding: 18px;
+            padding: 16px 20px;
             border-radius: 18px;
             font-weight: 600;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        /* Pengaturan Ikon */
+        .link-item i {
+            width: 35px; /* Biar ikon sejajar */
+            font-size: 18px;
+            color: var(--accent);
+            margin-right: 15px;
             text-align: center;
-            transition: 0.3s;
-            display: block;
         }
 
-        .btn-mewah:hover {
-            background: var(--accent);
+        /* Tanda Panah di Kanan */
+        .link-item::after {
+            content: "\f105"; /* Ikon panah FontAwesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            margin-left: auto;
+            opacity: 0.5;
+        }
+
+        /* Hover Effect */
+        .link-item:hover {
+            background: var(--white);
             color: var(--primary);
-            transform: translateY(-3px);
-            font-weight: 800;
+            transform: translateX(8px);
         }
+        
+        .link-item:hover i { color: var(--primary); }
 
-        footer { margin-top: 50px; font-size: 11px; color: #555; }
+        footer { margin-top: auto; padding-top: 40px; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
-    <div class="brand-section">
-        <div class="logo-box">
-            <img src="miftah.png" alt="Logo Yayasan Miftah">
-        </div>
-        <div class="title-text">
-            <h1>YAYASAN MIFTAH CIREBON</h1>
-            <p>Silahkan klik link yang anda butuhkan</p>
-        </div>
+    <div class="logo-wrapper">
+        <img src="miftah.png" alt="Logo">
     </div>
 
-    <div class="links-area">
-        <a href="#" class="btn-mewah">PPDB 2024/2025</a>
-        <a href="#" class="btn-mewah">TANYA TENTANG PPDB</a>
-        <a href="tentang.html" class="btn-mewah">TENTANG KAMI</a>
-        <a href="profil.html" class="btn-mewah">PROFIL SEKOLAH</a>
-        <a href="https://www.facebook.com/miftah.ilmi.31" class="btn-mewah" target="_blank">FACEBOOK</a>
-        <a href="#" class="btn-mewah" target="_blank">INSTAGRAM</a>
-        <a href="#" class="btn-mewah" target="_blank">YOUTUBE</a>
+    <div class="header">
+        <h1>YAYASAN MIFTAH CIREBON</h1>
+        <p>Silahkan klik link yang anda butuhkan</p>
+    </div>
+
+    <div class="links-container">
+        <a href="#" class="link-item">
+            <i class="fa-solid fa-user-plus"></i> PPDB 2024/2025
+        </a>
+        <a href="#" class="link-item">
+            <i class="fa-brands fa-whatsapp"></i> TANYA TENTANG PPDB
+        </a>
+        <a href="tentang.html" class="link-item">
+            <i class="fa-solid fa-circle-info"></i> TENTANG KAMI
+        </a>
+        <a href="profil.html" class="link-item">
+            <i class="fa-solid fa-school"></i> PROFIL SEKOLAH
+        </a>
+        <a href="konsultasi.html" class="link-item">
+            <i class="fa-solid fa-mosque"></i> KONSULTASI AGAMA
+        </a>
+        <a href="https://www.facebook.com/miftah.ilmi.31" class="link-item" target="_blank">
+            <i class="fa-brands fa-facebook"></i> FACEBOOK
+        </a>
+        <a href="#" class="link-item" target="_blank">
+            <i class="fa-brands fa-instagram"></i> INSTAGRAM
+        </a>
+        <a href="#" class="link-item" target="_blank">
+            <i class="fa-brands fa-youtube"></i> YOUTUBE
+        </a>
     </div>
 
     <footer>
-        &copy; 2026 Yayasan Miftah Cirebon
+        &copy; 2026 YAYASAN MIFTAH CIREBON | DIGITAL TEAM
     </footer>
 
 </body>
