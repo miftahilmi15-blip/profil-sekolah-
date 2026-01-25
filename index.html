@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link Official | Yayasan Miftah</title>
+    <title>Yayasan Miftah Cirebon | Official Links</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #013F00;
-            --accent: #d4b96a;
-            --white: #ffffff;
+            --primary: #012b01; /* Hijau Gelap */
+            --gold: #d4b96a;   /* Emas */
+            --gold-bright: #f1e0a2;
         }
 
         * {
@@ -20,92 +20,139 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: radial-gradient(circle at top, #024d01 0%, #011a00 100%);
+            background: radial-gradient(circle at top, #013F00 0%, #000000 100%);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 50px 24px;
-            color: var(--white);
+            padding: 40px 20px;
+            color: white;
         }
 
-        /* LOGO BOX - DIBUAT PUTIH BIAR "MIFTAH.PNG" KELIHATAN JELAS */
-        .logo-wrapper {
-            width: 120px;
-            height: 120px;
-            background: white; /* Background putih biar logo kontras */
-            border-radius: 35px;
+        /* LOGO SECTION */
+        .logo-container {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 25px;
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
-            border: 3px solid var(--accent);
-            padding: 12px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
-        .logo-wrapper img {
-            max-width: 100%;
+        /* Frame Emas Melingkar */
+        .logo-container::before {
+            content: "";
+            position: absolute;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 20px rgba(212, 185, 106, 0.4);
+        }
+
+        .logo-container img {
+            width: 80%;
             height: auto;
-            object-fit: contain;
+            z-index: 2;
+            filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
         }
 
-        .header { text-align: center; margin-bottom: 35px; }
-        .header h1 { font-size: 22px; font-weight: 800; letter-spacing: 1px; color: var(--accent); margin-bottom: 5px; }
-        .header p { font-size: 13px; color: rgba(255,255,255,0.6); }
+        /* HEADER TEXT */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-        /* LINKS AREA */
-        .links-container { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 14px; }
+        .header h1 {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--gold-bright);
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
 
-        .link-item {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--white);
-            text-decoration: none;
-            padding: 16px 20px;
-            border-radius: 18px;
-            font-weight: 600;
-            font-size: 15px;
+        .header p {
+            font-size: 13px;
+            color: #ccc;
+            opacity: 0.9;
+        }
+
+        /* LINK CONTAINER */
+        .links-wrapper {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .link-card {
+            background: rgba(1, 43, 1, 0.6);
+            border: 2px solid var(--gold); /* Bingkai Emas Persis Gambar */
+            padding: 18px 25px;
+            border-radius: 50px;
             display: flex;
             align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 700;
+            font-size: 15px;
             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
 
-        /* Pengaturan Ikon */
-        .link-item i {
-            width: 35px; /* Biar ikon sejajar */
-            font-size: 18px;
-            color: var(--accent);
-            margin-right: 15px;
+        /* Efek Kilau Tombol */
+        .link-card::before {
+            content: "";
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
+            transform: skewX(-25deg);
+            transition: 0.5s;
+        }
+
+        .link-card:hover::before {
+            left: 150%;
+        }
+
+        .link-card i {
+            width: 40px;
+            font-size: 20px;
+            color: var(--gold-bright);
+        }
+
+        /* Ikon Panah Kanan */
+        .link-card .chevron {
+            margin-left: auto;
+            font-size: 14px;
+            color: var(--gold);
+            opacity: 0.7;
+        }
+
+        .link-card:hover {
+            transform: scale(1.03);
+            background: rgba(212, 185, 106, 0.1);
+            box-shadow: 0 0 20px rgba(212, 185, 106, 0.3);
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 50px;
+            font-size: 10px;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 1px;
             text-align: center;
         }
-
-        /* Tanda Panah di Kanan */
-        .link-item::after {
-            content: "\f105"; /* Ikon panah FontAwesome */
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
-            margin-left: auto;
-            opacity: 0.5;
-        }
-
-        /* Hover Effect */
-        .link-item:hover {
-            background: var(--white);
-            color: var(--primary);
-            transform: translateX(8px);
-        }
-        
-        .link-item:hover i { color: var(--primary); }
-
-        footer { margin-top: auto; padding-top: 40px; font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
-    <div class="logo-wrapper">
-        <img src="miftah.png" alt="Logo">
+    <div class="logo-container">
+        <img src="miftah.png" alt="Logo Miftah" onerror="this.src='https://via.placeholder.com/150/013F00/FFFFFF?text=MIFTAH'">
     </div>
 
     <div class="header">
@@ -113,30 +160,30 @@
         <p>Silahkan klik link yang anda butuhkan</p>
     </div>
 
-    <div class="links-container">
-        <a href="#" class="link-item">
+    <div class="links-wrapper">
+        <a href="#" class="link-card">
             <i class="fa-solid fa-user-plus"></i> PPDB 2024/2025
+            <span class="chevron"><i class="fa-solid fa-chevron-right"></i></span>
         </a>
-        <a href="#" class="link-item">
+        
+        <a href="https://wa.me/628xxx" class="link-card">
             <i class="fa-brands fa-whatsapp"></i> TANYA TENTANG PPDB
+            <span class="chevron"><i class="fa-solid fa-chevron-right"></i></span>
         </a>
-        <a href="tentang.html" class="link-item">
+
+        <a href="tentang.html" class="link-card">
             <i class="fa-solid fa-circle-info"></i> TENTANG KAMI
+            <span class="chevron"><i class="fa-solid fa-chevron-right"></i></span>
         </a>
-        <a href="profil.html" class="link-item">
+
+        <a href="profil.html" class="link-card">
             <i class="fa-solid fa-school"></i> PROFIL SEKOLAH
+            <span class="chevron"><i class="fa-solid fa-chevron-right"></i></span>
         </a>
-        <a href="konsultasi.html" class="link-item">
-            <i class="fa-solid fa-mosque"></i> KONSULTASI AGAMA
-        </a>
-        <a href="https://www.facebook.com/miftah.ilmi.31" class="link-item" target="_blank">
-            <i class="fa-brands fa-facebook"></i> FACEBOOK
-        </a>
-        <a href="#" class="link-item" target="_blank">
+
+        <a href="https://instagram.com/xxx" class="link-card">
             <i class="fa-brands fa-instagram"></i> INSTAGRAM
-        </a>
-        <a href="#" class="link-item" target="_blank">
-            <i class="fa-brands fa-youtube"></i> YOUTUBE
+            <span class="chevron"><i class="fa-solid fa-chevron-right"></i></span>
         </a>
     </div>
 
