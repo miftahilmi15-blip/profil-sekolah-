@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | Yayasan Miftah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #013F00;
+            --gold: #d4b96a;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: radial-gradient(circle at top, #013F00 0%, #000000 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Navigasi Back */
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+        .btn-back i { margin-right: 8px; }
+        .btn-back:hover { transform: translateX(-5px); }
+
+        /* Header */
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header-section h1 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .header-section .underline {
+            width: 60px;
+            height: 4px;
+            background: var(--gold);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* Card Style */
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .info-card h2 {
+            font-size: 18px;
+            color: var(--gold);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-card p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            text-align: justify;
+        }
+
+        /* List Visi Misi */
+        .misi-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+        .misi-list li {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .misi-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Kembali ke Menu
+        </a>
+
+        <div class="header-section">
+            <h1>Tentang Kami</h1>
+            <div class="underline"></div>
+        </div>
+
+        <div class="info-card">
+            <h2><i class="fa-solid fa-history"></i> Sejarah Singkat</h2>
+            <p>
+                Yayasan Miftah Cirebon didirikan dengan semangat untuk mencetak generasi yang berakhlaqul karimah dan unggul dalam ilmu pengetahuan. Berawal dari majelis ilmu kecil, kini kami berkembang menjadi lembaga pendidikan yang terintegrasi untuk melayani umat.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2><i class="fa-solid fa-eye"></i> Visi Kami</h2>
+            <p>
+                Menjadi lembaga pendidikan Islam terdepan dalam membentuk generasi Rabbani yang cerdas, mandiri, dan bermanfaat bagi bangsa.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2><i class="fa-solid fa-bullseye"></i> Misi Kami</h2>
+            <ul class="misi-list">
+                <li>Menyelenggarakan pendidikan Islam berbasis karakter.</li>
+                <li>Mengembangkan potensi akademik dan bakat santri.</li>
+                <li>Membangun lingkungan belajar yang islami dan modern.</li>
+                <li>Menanamkan nilai-nilai Al-Qur'an dalam kehidupan sehari-hari.</li>
+            </ul>
+        </div>
+
+        <footer>
+            &copy; 2026 Yayasan Miftah Cirebon
+        </footer>
+    </div>
+
+</body>
+</html>
